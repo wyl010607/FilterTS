@@ -1,0 +1,6 @@
+torch~=2.2.2+cu118
+numpy~=1.26.3
+matplotlib~=3.8.4
+pandas~=2.2.2
+einops~=0.7.0
+scikit-learn~=1.4.2
