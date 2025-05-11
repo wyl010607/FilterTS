@@ -274,9 +274,9 @@ class Exp_Main(Exp_Basic):
             test_params_flop((batch_x.shape[1],batch_x.shape[2]))
             exit()
 
-        preds = np.array(preds)
-        trues = np.array(trues)
-        inputx = np.array(inputx)
+        preds = np.concatenate(preds, axis=0)
+        trues = np.concatenate(trues, axis=0)
+        inputx = np.concatenate(inputx, axis=0) # if there is not that line, ignore this
 
         print('preds_shape:', preds.shape)
         print('trues_shape:', trues.shape)
