@@ -24,3 +24,10 @@ sh ./scripts/FilterTS_electricity.sh
 ![Main Results](./pic/main_results.png)
 
 FilterTS demonstrates superior accuracy across eight multivariate long-term time series forecasting datasets compared to current state-of-the-art models in most cases. 
+
+## Note on the drop_last Setting
+
+During a recent code review we discovered that an unintended drop_last=True option was left active in the dataloader.
+Below are the results obtained after rerunning all experiments with drop_last=False. Across the majority of settings the differences are negligible, confirming that the original conclusions remain valid. 
+
+[Main Results](./pic/main_results_fix.png)
